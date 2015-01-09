@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/HFUGrayLight"
+    android:paddingBottom="30dp"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/HFUGrayDark"/> -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:layout_marginTop="8dp"
+        android:text="Apps"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_facebook"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent"
+            android:id="@+id/fb_button" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_studiportal"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="3dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent"
+            android:id="@+id/studi_button" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mensa"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="3dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent"
+            android:id="@+id/mensa_button" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_bib"
+            android:id="@+id/bib_button" />
+
+        </LinearLayout>
+
+
+</LinearLayout>

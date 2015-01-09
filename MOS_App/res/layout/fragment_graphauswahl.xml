@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.graphs.MainActivity" >
+
+    <EditText
+        android:id="@+id/etm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etb"
+        android:layout_below="@+id/etb"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:ems="10"
+        android:hint="Hier Wert eintragen" />
+
+    <EditText
+        android:id="@+id/etb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/indi"
+        android:layout_below="@+id/indi"
+        android:layout_toRightOf="@+id/textView1"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:ems="10"
+        android:hint="Hier Wert eintragen" />
+
+    <Button
+        android:id="@+id/indi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mos"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mos"
+        android:text="Eigene Berechnung"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/mos"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/verglbachelor"
+        android:layout_below="@+id/verglbachelor"
+        android:text="Softwareentwicklung" />
+
+    <Button
+        android:id="@+id/ai"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv1"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="44dp"
+        android:text="Anweder Support" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cn"
+        android:layout_alignParentTop="true"
+        android:text="@string/graphbeschreibung" />
+
+    <Button
+        android:id="@+id/cn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="IT-Consoulting" />
+
+    <Button
+        android:id="@+id/spb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ai"
+        android:layout_alignRight="@+id/ai"
+        android:layout_below="@+id/ai"
+        android:text="Netzwerk" />
+
+    <Button
+        android:id="@+id/verglbachelor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spb"
+        android:layout_alignRight="@+id/spb"
+        android:layout_below="@+id/spb"
+        android:text="Vertrieb-Außendienst" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etb"
+        android:layout_alignLeft="@+id/indi"
+        android:text="Bachelor \nEinstiegsgehalt"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etb"
+        android:layout_toLeftOf="@+id/etm"
+        android:text="Master \nEinstiegsgehalt"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+<!--  -->
+</RelativeLayout>

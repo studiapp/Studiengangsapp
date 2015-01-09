@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mobile Systeme</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Suche</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="navigation_drawer_items_array">
+        <item>Mobile Systeme</item>
+        <item>Home</item>
+        <item>Studiengang</item>
+        <item>Kontakt</item>
+        <item>Campus</item>
+        <item>Webmail</item>
+        <item>Vorlesungsplan</item>
+        <item>Webseite</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!--  Strings for Points of Interest fragment_poi -->
+    <string name="latitude">Latitude : </string>
+    <string name="longitude">Longitude : </string>
+    <string name="accuracy">Accuracy : </string>
+    <string name="provider">Provider : </string>
+
+    <!-- Items for Spinners in fragment_vorlesung -->
+    <string-array name="studiengang">
+        <item>AIB</item>
+        <item>CNB</item>
+        <item>SPB</item>
+        <item>MOS</item>
+    </string-array>
+
+    <string-array name="Semester_AIB">
+        <item>AIB1</item>
+        <item>AIB2</item>
+        <item>AIB3</item>
+        <item>AIB4</item>
+        <item>AIB6</item>
+    </string-array>
+
+    <string-array name="Semester_CNB">
+        <item>CNB1</item>
+        <item>CNB2</item>
+        <item>CNB3</item>
+        <item>CNB4</item>
+        <item>CNB6</item>
+    </string-array>
+
+    <string-array name="Semester_SPB">
+        <item>SPB1</item>
+        <item>SPB2</item>
+        <item>SPB3</item>
+        <item>SPB4</item>
+        <item>SPB6</item>
+    </string-array>
+
+    <string-array name="Semester_MOS">
+        <item>MOS1</item>
+        <item>MOS2</item>
+    </string-array>
+
+    <!-- Links to download the different course schedules -->
+
+    <string name="AIB1_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1430&amp;pg=AIB1</string>
+    <string name="AIB2_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1430&amp;pg=AIB2</string>
+    <string name="AIB3_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1430&amp;pg=AIB3</string>
+    <string name="AIB4_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1430&amp;pg=AIB4</string>
+    <string name="AIB6_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1430&amp;pg=AIB6</string>
+
+    <string name="CNB1_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1433&amp;pg=CNB1</string>
+    <string name="CNB2_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1433&amp;pg=CNB2</string>
+    <string name="CNB3_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1433&amp;pg=CNB3</string>
+    <string name="CNB4_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1433&amp;pg=CNB4</string>
+    <string name="CNB6_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1433&amp;pg=CNB6</string>
+
+    <string name="SPB1_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1452&amp;pg=SPB1</string>
+    <string name="SPB2_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1452&amp;pg=SPB2</string>
+    <string name="SPB3_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1452&amp;pg=SPB3</string>
+    <string name="SPB4_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1452&amp;pg=SPB4</string>
+    <string name="SPB6_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1452&amp;pg=SPB6</string>
+
+    <string name="MOS1_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1538&amp;pg=MOS1</string>
+    <string name="MOS2_vorlesung_link">https://stundenplan.hs-furtwangen.de/splan/std?act=tt&amp;lan=de&amp;pu=-1&amp;sel=pg&amp;og=1538&amp;pg=MOS2</string>
+
+    <string name="AIB1">AIB1</string>
+    <string name="AIB2">AIB2</string>
+    <string name="AIB3">AIB3</string>
+    <string name="AIB4">AIB4</string>
+    <string name="AIB6">AIB6</string>
+
+    <string name="CNB1">CNB1</string>
+    <string name="CNB2">CNB2</string>
+    <string name="CNB3">CNB3</string>
+    <string name="CNB4">CNB4</string>
+    <string name="CNB6">CNB6</string>
+
+    <string name="SPB1">SPB1</string>
+    <string name="SPB2">SPB2</string>
+    <string name="SPB3">SPB3</string>
+    <string name="SPB4">SPB4</string>
+    <string name="SPB6">SPB6</string>
+
+    <string name="MOS1">MOS1</string>
+    <string name="MOS2">MOS2</string>
+
+    <string name="HFUdomain">https://stundenplan.hs-furtwangen.de</string>
+
+    <string name="Studistrukt_Header1">Allgemeines Ziel</string>
+    <string name="Studistrukt_Zeile1">- Master Niveau im Sinne des Qualifikationsrahmens für deutsche Hochschulabschlüsse (KMK Beschluss vom 22.4.2005)</string>
+    <string name="Studistrukt_Header2">ZIELE bezüglich FACHLICHER KOMPETENZEN</string>
+	<string name="Studistrukt_Zeile2_1">- Befähigung zur Analyse von Problemstellungen und zur Erarbeitung von Lösungsansätzen im Bereich „Mobilität“, 
+	    			insbesondere die Befähigung zur Konzeption, Entwurf und Umsetzung von Anwendungen für mobile Systeme</string>
+	<string name="Studistrukt_Zeile2_2">- Expertise für Definition, Entwurf und Umsetzung von Mobilitätslösungen aus mindestens einer Domäne der mobilen 
+	    			Assistenzsysteme wie z. B. die Bereiche Automotive, E-Mobility oder Ambient Assisted Living</string>
+    <string name="Studistrukt_Header3">ZIELE bezüglich ÜBERFACHLICHER KOMPETENZEN</string>
+	<string name="Studistrukt_Zeile3_1">- Informationsbedarf identifizieren, Wissen aufbauen und wissenschaftliches Urteilsvermögen bilden, um Lösungsstrategien 
+	    			für komplexe fachliche Fragestellungen zu entwickeln oder wissenschaftliche Arbeiten zu verfassen</string>
+	<string name="Studistrukt_Zeile3_2">- Erwerb von Entscheidungs-, Problemlösungs- und Teamkompetenz zur Entwicklung effizienter, 
+	    			marktorientierter und bedarfsgerechter Produktlösungen</string>
+    <string name="Studistrukt_Header4">BERUFSFELDORIENTIERTE ZIELE</string>
+    <string name="Studistrukt_Zeile4_1">- Softwarearchitektur für mobile Systeme und Anwendungen</string>
+    <string name="Studistrukt_Zeile4_2">- Produkt-Management und Projektleitung</string>
+    <string name="Studistrukt_Zeile4_3">- IT-Beratung</string>
+
+    <string name="msg_not_enough_cash">not enough cash - building a station costs </string>
+    <string name="msg_station_exists">A station exists at this location: </string>
+    <string name="msg_delivered">Letter delivered - you earned: </string>
+    <string name="enter_station_name">Enter a station name</string>
+    <string name="msg_new_letter">This station has a letter to %1$s. Do you want to deliver it for %2$d?</string>
+    <string name="no_new_letter">This station has no new letter to deliver.</string>
+    <string name="has_location">Location found</string>
+
+    <!-- HOME SCREEN STRINGS -->
+    <string name="home_intro">Im neuen innovativen Masterstudiengang Mobile Systeme können Sie die Studienschwerpunkte Mobilität und
+        assistive Systeme in den Anwendungsfeldern Verkehr, Gesundheit oder Bildung vertiefen. Der Studiengang eignet sich für
+        Absolventen der Informatik und angrenzender Fachgebiete.</string>
+    <string name="home_videotext">Die Fakultät Informatik widmet dem Thema Mobile Systeme ein neues Labor. GLFtv
+        zeigt das neue Labor und Paul, den humanoiden Roboter. Ein Beitrag von Sean
+        Kaltenbacher und Johannes Hermann.</string>
+
+      <!-- DESCRIPTION BudgetRechner -->
+     <string name="graphbeschreibung">Im Folgenden erhalten Sie eine Auswahl möglicher Berufszweige welche Ihnen eine Übersicht der Einkünfte
+         als Bachelorant und Masterant bietet.</string>
+</resources>
