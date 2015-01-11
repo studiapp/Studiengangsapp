@@ -132,8 +132,6 @@ public class MainActivity extends Activity {
     public void onClick(View v) {
 
         fragment = null;
-        ListFragment listfragment;
-        listfragment = null;
         
         switch (v.getId()) {
 
@@ -284,7 +282,7 @@ public class MainActivity extends Activity {
                 fragment = new CampusFragment();
                 break;
             case 5:
-                fragment = new WebmailFragment();
+                fragment = new WebmailFragment(/*_DownloadManager*/);
                 break;
             case 6:
                 fragment = new VorlesungsplanFragment(_DownloadManager);
