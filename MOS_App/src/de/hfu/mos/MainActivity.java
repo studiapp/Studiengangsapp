@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -30,6 +31,11 @@ public class MainActivity extends Activity {
     private SearchView searchView;
 
     private ActionBarDrawerToggle mDrawerToggle;
+    
+    //used to track backpressed. twice pressed in 1s should close app
+    private int backPressed;
+	private Handler h;
+	private int delay; //milliseconds
 
     // nav drawer title
     private CharSequence mDrawerTitle;
@@ -48,6 +54,19 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);       
 
+        backPressed = 0;
+        
+		h = new Handler();
+		delay = 1000; //milliseconds
+
+		h.postDelayed(new Runnable(){
+		    public void run(){
+		    	backPressed = 0;
+		    	h.postDelayed(this, delay);
+		    }
+		}, delay);
+        
+        
         //init Downloadmanager
         _DownloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
 
@@ -333,19 +352,34 @@ public class MainActivity extends Activity {
         }
     }
 
+    public int getBackPressed(){
+    	
+    	return backPressed;
+    	
+    }
+    
+    public void incBackPressed(){
+    	
+    	backPressed++;
+    }
+    
     @Override
     public void onBackPressed() {
 
+    	incBackPressed();
         //enables WebView to go page back in website and felix
         if (fragment instanceof WebsiteFragment) {
-            if (!((WebsiteFragment) fragment).webGoBack()) {
+            if (!((WebsiteFragment) fragment).webGoBack() &&
+            		getBackPressed() > 1) {
                 super.onBackPressed();
             }
         } else if (fragment instanceof FelixFragment) {
-            if (!((FelixFragment) fragment).webGoBack()) {
+            if (!((FelixFragment) fragment).webGoBack() &&
+            		getBackPressed() > 1) {
                 super.onBackPressed();
             }
-        } else super.onBackPressed();
+        } else if(getBackPressed() > 1)
+        	super.onBackPressed();
     }
 
     @Override

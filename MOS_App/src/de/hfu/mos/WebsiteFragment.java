@@ -1,6 +1,5 @@
 package de.hfu.mos;
 
-import de.hfu.mos.R;
 import android.app.Fragment;
 import android.content.Context;
 import android.net.ConnectivityManager;
