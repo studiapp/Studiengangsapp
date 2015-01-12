@@ -1,12 +1,11 @@
 package de.hfu.mos;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
  
-public class ConnectionDetector extends Fragment {
+public class ConnectionDetector{
  
     private ConnectionDetector(){
     }
