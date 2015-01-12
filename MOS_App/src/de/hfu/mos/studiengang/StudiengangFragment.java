@@ -14,7 +14,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-
+import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
 
 public class StudiengangFragment extends Fragment {
@@ -76,55 +76,57 @@ public class StudiengangFragment extends Fragment {
 
 	private void doOnClick(View v){
 		
-		switch(v.getId()){
-		
-		case R.id.ButtonS3M1_5:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem3_Abschlussarbeit_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS2M1:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem2_InfrastrukturenDerKommunikation_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS2M2:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem2_SichereCloudDienste_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS2M3:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem2_SoftwareFuerMobileSysteme_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS2M4:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem2_Projekt_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS2M5:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_WPM_Beispiel_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS1M1:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_AssistiveSysteme_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS1M2:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_Ergonomie_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS1M3:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_SEmobilerSysteme_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS1M4:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_MobilitaetUndInnovation_MOS.pdf";
-			downloadModul(url);
-			break;
-		case R.id.ButtonS1M5:
-			url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/WPVs-WS2014-15/Digitale_Geschaeftsmodelle_und_Prozesse_MOS.pdf";
-			downloadModul(url);
-			break;
-		default:
-			Toast.makeText(getActivity(), "Irgendwas ging schief", Toast.LENGTH_SHORT).show();
-		}
+		if(ConnectionDetector.isOnline(getActivity()))
+			switch(v.getId()){
+			
+				case R.id.ButtonS3M1_5:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem3_Abschlussarbeit_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS2M1:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem2_InfrastrukturenDerKommunikation_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS2M2:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem2_SichereCloudDienste_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS2M3:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem2_SoftwareFuerMobileSysteme_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS2M4:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem2_Projekt_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS2M5:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_WPM_Beispiel_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS1M1:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_AssistiveSysteme_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS1M2:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_Ergonomie_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS1M3:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_SEmobilerSysteme_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS1M4:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/MOS/Sem1_MobilitaetUndInnovation_MOS.pdf";
+					downloadModul(url);
+					break;
+				case R.id.ButtonS1M5:
+					url = "http://www.hs-furtwangen.de/fileadmin/user_upload/Fakultaet_IN/Dokumente/Modulbeschreibungen/WPVs-WS2014-15/Digitale_Geschaeftsmodelle_und_Prozesse_MOS.pdf";
+					downloadModul(url);
+					break;
+				default:
+					Toast.makeText(getActivity(), "Irgendwas ging schief", Toast.LENGTH_SHORT).show();
+			}
+		else Toast.makeText(getActivity(), "No Internet available", Toast.LENGTH_SHORT).show();
 	}
 	
 	private void downloadModul(String linkModul){

@@ -13,7 +13,7 @@ import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
+import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
 
 public class WebmailFragment extends Fragment {
@@ -107,21 +107,13 @@ public class WebmailFragment extends Fragment {
 
 		_WebView.setWebChromeClient(new WebChromeClient());
 
-		if (isOnline())
+		if (ConnectionDetector.isOnline(getActivity()))
 			_WebView.loadUrl("https://webmail.hs-furtwangen.de/ox.html");
 		else
 			_WebView.loadData(noInternet, "text/html", null);
 
 	}
 	
-
-	//looks for onlinestate //Redundanz WebMail <-> FelixLogin <-> Website
-    public boolean isOnline() {
-        ConnectivityManager cm =
-                (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
-    }
  
     /*
     private class test extends AsyncTask<String, Void, Void>{

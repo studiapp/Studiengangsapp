@@ -48,6 +48,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
 import de.hfu.mos.R.array;
 import de.hfu.mos.R.color;
@@ -133,7 +134,7 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 				
 				case R.id.button_updateVorlesungsplan:
 					
-					if(isOnline()){
+					if(ConnectionDetector.isOnline(getActivity())){
 						
 						setFileName();
 						getFileLinkAndShowFile();
@@ -322,14 +323,6 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 		
 		file = new File(path.getPath());
 	}
-	
-	//looks for onlinestate //Redundanz WebMail <-> FelixLogin <-> Website
-    public boolean isOnline() {
-        ConnectivityManager cm =
-                (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
-    }
 	
 	private class Vorlesung extends AsyncTask<Void, Void, LinearLayout>{
 		
