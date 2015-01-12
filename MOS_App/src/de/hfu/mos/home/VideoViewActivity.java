@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.home;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
@@ -9,6 +9,8 @@ import android.app.ProgressDialog;
 import android.util.Log;
 import android.widget.MediaController;
 import android.widget.VideoView;
+
+import de.hfu.mos.R;
 
 public class VideoViewActivity extends Activity {
 

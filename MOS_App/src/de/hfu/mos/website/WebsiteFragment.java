@@ -1,44 +1,46 @@
-package de.hfu.mos;
+package de.hfu.mos.website;
 
-import android.app.DownloadManager;
-import android.app.DownloadManager.Request;
 import android.app.Fragment;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.CookieManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class FelixFragment extends Fragment {
-	
-	private WebView _WebView;
-	private DownloadManager _DownloadManager;
-		
-	//String to display when no internet available:
-    private String noInternet = "<html><body>No internet available! Try again later.</body></html>";
-	
-	public FelixFragment(DownloadManager dm) {
+import de.hfu.mos.R;
 
-		_DownloadManager = dm;
-	}
+public class WebsiteFragment extends Fragment {
 	
+	private String url;
+	private WebView _WebView;
+	
+	//This string shows when internet is not available
+	private String _noInternet = "<html><body>No internet available! Try again later.</body></html>";
+	
+	public WebsiteFragment() {
+
+        url = "http://www.hs-furtwangen.de/willkommen.html";
+	}
+
+    public WebsiteFragment(String search) {
+
+        url = "https://www.google.de/m/search?q=test&ie=utf-8&oe=utf-8&gws_rd=cr&ei=b5eNVNfpGY33aomMgbgD#q=" + search +" +site:www.hs-furtwangen.de";
+    }
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-		View rootView = inflater.inflate(R.layout.fragment_felix, container, false);
+		View rootView = inflater.inflate(R.layout.fragment_website, container, false);
 
-		_WebView = (WebView) rootView.findViewById(R.id.webView_Felix);
+		_WebView = (WebView) rootView.findViewById(R.id.webView_Website);
 		
-		webLogin();
-	
+		loadWebsite();
+		
 		return rootView;
 	}
 	
@@ -61,7 +63,7 @@ public class FelixFragment extends Fragment {
     }
 	
     //Handles webView:
-	public void webLogin() {
+	public void loadWebsite() {
 
 		_WebView.getSettings().setJavaScriptEnabled(true);
 
@@ -78,23 +80,6 @@ public class FelixFragment extends Fragment {
 			// forces page to open in webView instead of Browser
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-								
-				if (url.contains(".pdf") ||
-						url.contains(".doc") ||
-						url.contains(".txt") ||
-						url.contains(".zip") ||
-						url.contains(".rar") ||
-						url.contains(".png")) {
-				
-					String cookie = CookieManager.getInstance().getCookie(url);
-					Request request = new Request(Uri.parse(url));
-					request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-					request.setDestinationInExternalPublicDir(
-							Environment.DIRECTORY_DOWNLOADS, url.substring(url.lastIndexOf("/", url.length())));
-					request.addRequestHeader("Cookie", cookie);
-					_DownloadManager.enqueue(request);
-
-				} else
 				view.loadUrl(url);
 
 				return true;
@@ -104,9 +89,9 @@ public class FelixFragment extends Fragment {
 		_WebView.setWebChromeClient(new WebChromeClient());
 
 		if (isOnline())
-			_WebView.loadUrl("https://felix.hs-furtwangen.de/dmz/");
+			_WebView.loadUrl(url);
 		else
-			_WebView.loadData(noInternet, "text/html", null);
+			_WebView.loadData(_noInternet, "text/html", null);
 
 	}
 	

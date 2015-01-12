@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.home;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import de.hfu.mos.R;
 
 public class HomeFragment extends Fragment {
 

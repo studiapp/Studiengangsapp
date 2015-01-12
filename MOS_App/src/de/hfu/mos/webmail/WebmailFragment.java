@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.webmail;
 
 import android.app.DownloadManager;
 import android.app.Fragment;
@@ -13,6 +13,8 @@ import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import de.hfu.mos.R;
 
 public class WebmailFragment extends Fragment {
 	

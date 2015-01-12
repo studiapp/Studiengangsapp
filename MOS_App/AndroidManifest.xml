@@ -25,7 +25,7 @@
         android:label="@string/app_name"
         android:theme="@style/CustomActionBar" >
 
-        <activity android:name="de.hfu.mos.StartActivity"
+        <activity android:name=".startanimation.StartActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
@@ -45,7 +45,7 @@
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".VideoViewActivity" />
+        <activity android:name=".home.VideoViewActivity" />
         <activity android:name="de.hfu.mos.RSSReaderFragment">
         </activity>
         <activity android:name="de.hfu.mos.SensorFragment">

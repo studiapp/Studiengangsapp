@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.DownloadManager;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.ListFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,6 +20,15 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
+
+import de.hfu.mos.campus.CampusFragment;
+import de.hfu.mos.fakultaet.InformatikFragment;
+import de.hfu.mos.home.FelixFragment;
+import de.hfu.mos.home.HomeFragment;
+import de.hfu.mos.kontakte.KontaktFragment;
+import de.hfu.mos.studiengang.StudiengangFragment;
+import de.hfu.mos.webmail.WebmailFragment;
+import de.hfu.mos.website.WebsiteFragment;
 
 public class MainActivity extends Activity {
 
@@ -93,7 +101,7 @@ public class MainActivity extends Activity {
 
         drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_nav_home, "Home");
         drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_nav_studiengang, "Studiengang MOS");
-        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_nav_informatik, "Fakult‰t Informatik");
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_nav_informatik, "Fakult√§t Informatik");
         drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_nav_kontakte, "Kontakt");
         drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_nav_campus, "Campus");
         drawerItem[5] = new ObjectDrawerItem(R.drawable.ic_nav_webmail, "Webmail");

@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.studiengang;
 
 import java.io.File;
 
@@ -14,6 +14,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import de.hfu.mos.R;
 
 public class StudiengangFragment extends Fragment {
 	

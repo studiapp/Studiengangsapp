@@ -1,9 +1,7 @@
-package de.hfu.mos;
+package de.hfu.mos.kontakte;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,6 +21,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hfu.mos.R;
 import de.hfu.mos.kontakte.adapter.CustomListAdapter;
 import de.hfu.mos.kontakte.app.AppController;
 import de.hfu.mos.kontakte.model.Kontakt;

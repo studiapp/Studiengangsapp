@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.startanimation;
 
 
 import android.app.Activity;
@@ -10,11 +10,13 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import de.hfu.mos.MainActivity;
+import de.hfu.mos.R;
 
 public class StartActivity extends Activity implements
         AnimationListener {
