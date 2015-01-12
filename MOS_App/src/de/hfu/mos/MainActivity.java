@@ -89,15 +89,16 @@ public class MainActivity extends Activity {
         mDrawerList.addFooterView(footer, null, true);
 
         // list the drawer items
-        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[7];
+        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[8];
 
         drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_nav_home, "Home");
         drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_nav_studiengang, "Studiengang");
-        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_nav_kontakte, "Kontakt");
-        drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_nav_campus, "Campus");
-        drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_nav_webmail, "Webmail");
-        drawerItem[5] = new ObjectDrawerItem(R.drawable.ic_nav_vorlesungsplan, "Vorlesungsplan");
-        drawerItem[6] = new ObjectDrawerItem(R.drawable.ic_nav_website, "Webseite");
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_nav_informatik, "Fakultät Informatik");
+        drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_nav_kontakte, "Kontakt");
+        drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_nav_campus, "Campus");
+        drawerItem[5] = new ObjectDrawerItem(R.drawable.ic_nav_webmail, "Webmail");
+        drawerItem[6] = new ObjectDrawerItem(R.drawable.ic_nav_vorlesungsplan, "Vorlesungsplan");
+        drawerItem[7] = new ObjectDrawerItem(R.drawable.ic_nav_website, "Webseite");
 
         // Pass the folderData to our ListView adapter
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.listview_item_row, drawerItem);
@@ -179,7 +180,7 @@ public class MainActivity extends Activity {
                 getOpenAppIntent(this, pnSt);
                 break;
            case R.id.mensa_button:
-                String pnMs = "de.rentoudu.mensa";
+                String pnMs = "de.hfu.mensa";
                 getOpenAppIntent(this, pnMs);
                 break;
             case R.id.bib_button:
@@ -287,12 +288,14 @@ public class MainActivity extends Activity {
         fragment = null;
 
         switch (position) {
-            case 0: //this is because of the header
-            case 1:	//here is the actual first element of the drawer
+            case 0:
                 fragment = new HomeFragment();
                 break;
-            case 2:
+            case 1:
                 fragment = new StudiengangFragment(_DownloadManager);
+                break;
+            case 2:
+                fragment = new InformatikFragment(_DownloadManager);
                 break;
             case 3:
                 fragment = new KontaktFragment();
@@ -301,7 +304,7 @@ public class MainActivity extends Activity {
                 fragment = new CampusFragment();
                 break;
             case 5:
-                fragment = new WebmailFragment(/*_DownloadManager*/);
+                fragment = new WebmailFragment();
                 break;
             case 6:
                 fragment = new VorlesungsplanFragment(_DownloadManager);
@@ -309,7 +312,6 @@ public class MainActivity extends Activity {
             case 7:
                 fragment = new WebsiteFragment();
                 break;
-
             default:
                 break;
         }

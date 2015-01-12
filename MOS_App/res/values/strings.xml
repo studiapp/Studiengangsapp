@@ -8,9 +8,9 @@
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="navigation_drawer_items_array">
-        <item>Mobile Systeme</item>
         <item>Home</item>
         <item>Studiengang</item>
+        <item>Fakultät Informatik</item>
         <item>Kontakt</item>
         <item>Campus</item>
         <item>Webmail</item>
@@ -146,4 +146,31 @@
       <!-- DESCRIPTION BudgetRechner -->
      <string name="graphbeschreibung">Im Folgenden erhalten Sie eine Auswahl möglicher Berufszweige welche Ihnen eine Übersicht der Einkünfte
          als Bachelorant und Masterant bietet.</string>
+
+    <!-- FAKULTÄT INFORMATIK STRINGS -->
+    <string name="inf_intro1">Die Fakultät Informatik ist eine der modernsten und gleichzeitig traditionsreichsten Informatik-Fakultäten Deutschlands.
+        Wie kaum eine andere Hochschule verfügt die Hochschule Furtwangen über mehr als 40 Jahre Erfahrung in der akademischen Ausbildung von
+        Informatikerinnen und Informatikern. An den Erfordernissen des Mega-Wachstumsmarktes Informationstechnologie ausgerichtet,
+        ist ein Informatikstudium an der Hochschule Furtwangen das ideale Karrieresprungbrett für eine glänzende berufliche Zukunft.</string>
+    <string name="inf_intro2">Erfahrene Lehrkräfte, eine exzellente Lehre und unsere modernen Labore mit bester Ausstattung garantieren Ihnen ein
+        hervorragendes und praxisorientiertes Studium. Ca. 600 Studentinnen und Studenten unserer drei Bachelor- und zwei Masterstudiengänge profitieren
+        von der Betreuung in kleinen Gruppen und den vielfältigen Kooperationen mit unseren Industriepartnern. Alle Studiengänge sind in innovative,
+        angewandte Forschungs- und Entwicklungsprojekte eingebunden. Wissenschaftler/innen der Fakultät Informatik, darunter fünf Doktoranden, lehren
+        und forschen derzeit in den Schwerpunkten Cloud Computing, IT-Sicherheit und Software Engineering. </string>
+    <string name="inf_intro3">Wer an der renommierten Fakultät Informatik der Hochschule Furtwangen studiert, verfügt über hervorragende Chancen auf dem Arbeitsmarkt.
+        In Rankings erreicht die Fakultät regelmäßig Spitzenplätze. Feedback von Personalchefs der Wirtschaft und unseren Industriepartnern bestätigenunseren Absolventen
+        die hohe Qualität beim Praxisbezug des Studiums.</string>
+    <string name="inf_AIB">Wer Allgemeine Informatik studiert, lernt den Prozess der Softwareentwicklung als Ganzes kennen und erwirbt gleichzeitig das Handwerkszeug,
+        um Softwareprojekte zu entwerfen und umzusetzen. Programmiersprachen, Betriebssysteme und Internettechnologien bilden die Schwerpunkte dieses Studiengangs,
+        der auf eine über 40-jährige Erfolgsgeschichte zurückblicken kann.</string>
+    <string name="inf_CNB">Ausgerichtet an den zwei hochaktuellen Schwerpunkten Netztechnologien und IT-Sicherheit ist Computer Networking ein deutschlandweit einzigartiger Studiengang.
+        Das praxisnahe Studium gibt Ihnen das Wissen an die Hand, die vernetzte Welt von morgen zu gestalten und bildet Sie zu gefragten Experten in einem boomenden Wachstumsmarkt aus.</string>
+    <string name="inf_SPB">Software-Produktmanager/innen arbeiten an der Schnittstelle zwischen Informatik, Management und Wirtschaft. Sie sorgen dafür, dass Softwareprodukte
+        marktgerecht und wirtschaftlich erfolgreich gestaltet werden und beim Kunden ankommen. Dieser international und interdisziplinär ausgerichtete Studiengang macht
+        Sie nicht nur zu Spezialisten für den IT-Markt, sondern vermittelt Ihnen auch umfassendes Fachwissen aus verschiedenen Bereichen der Informatik.</string>
+    <string name="inf_INM">Der Masterstudiengang Informatik (INM) bietet erfolgreichen Bachelorabsolventen die Möglichkeit, sich in den Bereichen Software Engineering und
+        verteilte Systeme weiterzuqualifizieren und komplexe IT-Herausforderungen zu meistern.Er ersetzt ab dem Wintersemester 2014/15 den Masterstudiengang Advanced Computer Science.</string>
+    <string name="inf_MOS">Im neuen innovativen Masterstudiengang Mobile Systeme können Sie die Studienschwerpunkte Mobilität und assistive Systeme in den Anwendungsfeldern Verkehr,
+        Gesundheit oder Bildung vertiefen. Der Studiengang eignet sich für Absolventen der Informatik und angrenzender Fachgebiete.</string>
+
 </resources>

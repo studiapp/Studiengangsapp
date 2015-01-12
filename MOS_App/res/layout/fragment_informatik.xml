@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:background="@color/White"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:text="WILLKOMMEN AN DER FAKULTÄT INFORMATIK"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3sp"
+            android:layout_marginBottom="5sp"
+            android:background="@color/Raum" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:paddingBottom="5sp"
+            android:paddingTop="5sp"
+            android:scaleType="fitXY"
+            android:src="@drawable/gruppenbild_inf" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/inf_intro1"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:paddingBottom="5sp"
+            android:paddingTop="5sp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic1_inf" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/inf_intro2"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:paddingBottom="5sp"
+            android:paddingTop="5sp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic2_inf" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingBottom="5sp"
+            android:text="@string/inf_intro3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UNSERE STUDIENGÄNGE"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3sp"
+            android:layout_marginBottom="5sp"
+            android:background="@color/Raum" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingBottom="5sp"
+            android:text="Bachelorstudiengänge"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingBottom="5sp"
+            android:text="Die Fakultät IN bietet drei Bachelorstudiengänge an:"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/ButtonAIB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:background="@color/HFULight"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="2sp"
+            android:text="ALLGEMEINE INFORMATIK (BACHELOR OF SCIENCE)"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingTop="5sp"
+            android:text="Software • Web • Technology:"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/inf_AIB"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="4sp"
+            android:background="@color/Raum" />
+
+        <Button
+            android:id="@+id/ButtonCNB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:background="@color/HFULight"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="2sp"
+            android:text="COMPUTER NETWORKING (BACHELOR OF SCIENCE)"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingTop="5sp"
+            android:text="Netztechnologien • IT-Sicherheit:"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/inf_CNB"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="4sp"
+            android:background="@color/Raum" />
+
+        <Button
+            android:id="@+id/ButtonSPB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:background="@color/HFULight"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="2sp"
+            android:text="SOFTWARE PRODUKTMANAGEMENT\n (BACHELOR OF SCIENCE)"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingTop="5sp"
+            android:text="Projekte • Prozesse • Produkte:"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/inf_SPB"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="4sp"
+            android:background="@color/Raum" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingBottom="5sp"
+            android:text="Masterstudiengänge"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingBottom="5sp"
+            android:text="Nach dem Bachelorstudium haben Sie die Möglichkeit, sich mit einem unserer zwei Masterstudiengänge weiterzuqualifizieren."
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/ButtonINM"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:background="@color/HFULight"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="2sp"
+            android:text="INFORMATIK (MASTER OF SCIENCE)"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingTop="5sp"
+            android:text="Software Engineering • Verteilte Systeme:"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/inf_INM"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="4sp"
+            android:background="@color/Raum" />
+
+        <Button
+            android:id="@+id/ButtonMOS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:background="@color/HFULight"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="2sp"
+            android:text="MOBILE SYSTEME (MASTER OF SCIENCE)"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:paddingTop="5sp"
+            android:text="Mobilität • Assistive Systeme:"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginTop="4sp"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/inf_MOS"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>
