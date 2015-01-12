@@ -92,8 +92,8 @@ public class MainActivity extends Activity {
         ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[8];
 
         drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_nav_home, "Home");
-        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_nav_studiengang, "Studiengang");
-        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_nav_informatik, "Fakult√§t Informatik");
+        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_nav_studiengang, "Studiengang MOS");
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_nav_informatik, "Fakult‰t Informatik");
         drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_nav_kontakte, "Kontakt");
         drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_nav_campus, "Campus");
         drawerItem[5] = new ObjectDrawerItem(R.drawable.ic_nav_webmail, "Webmail");
@@ -289,27 +289,28 @@ public class MainActivity extends Activity {
 
         switch (position) {
             case 0:
+            case 1:
                 fragment = new HomeFragment();
                 break;
-            case 1:
+            case 2:
                 fragment = new StudiengangFragment(_DownloadManager);
                 break;
-            case 2:
+            case 3:
                 fragment = new InformatikFragment(_DownloadManager);
                 break;
-            case 3:
+            case 4:
                 fragment = new KontaktFragment();
                 break;
-            case 4:
+            case 5:
                 fragment = new CampusFragment();
                 break;
-            case 5:
+            case 6:
                 fragment = new WebmailFragment();
                 break;
-            case 6:
+            case 7:
                 fragment = new VorlesungsplanFragment(_DownloadManager);
                 break;
-            case 7:
+            case 8:
                 fragment = new WebsiteFragment();
                 break;
             default:
