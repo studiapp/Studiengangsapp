@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -21,6 +22,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
 import de.hfu.mos.kontakte.adapter.CustomListAdapter;
 import de.hfu.mos.kontakte.app.AppController;
@@ -46,6 +48,10 @@ public class KontaktFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_kontakte, container, false);
+
+        if (!(ConnectionDetector.isOnline(getActivity()))) {
+            Toast.makeText(getActivity(), "Sorry, no Internet available", Toast.LENGTH_LONG).show();
+        }
 
         listView = (ListView) rootView.findViewById(R.id.list);
         adapter = new CustomListAdapter(getActivity(), kontaktList);
