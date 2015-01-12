@@ -20,13 +20,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
-
 import de.hfu.mos.campus.CampusFragment;
 import de.hfu.mos.fakultaet.InformatikFragment;
 import de.hfu.mos.home.FelixFragment;
 import de.hfu.mos.home.HomeFragment;
 import de.hfu.mos.kontakte.KontaktFragment;
 import de.hfu.mos.studiengang.StudiengangFragment;
+import de.hfu.mos.vorlesungsplan.VorlesungsplanFragment;
 import de.hfu.mos.webmail.WebmailFragment;
 import de.hfu.mos.website.WebsiteFragment;
 

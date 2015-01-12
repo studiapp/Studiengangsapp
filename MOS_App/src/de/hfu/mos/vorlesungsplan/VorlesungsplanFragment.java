@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.vorlesungsplan;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -48,7 +48,13 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import de.hfu.mos.util.QuickSortCalendar;
+import de.hfu.mos.R;
+import de.hfu.mos.R.array;
+import de.hfu.mos.R.color;
+import de.hfu.mos.R.id;
+import de.hfu.mos.R.layout;
+import de.hfu.mos.R.string;
+import de.hfu.mos.vorlesungsplan.quicksort.QuickSortCalendar;
 
 public class VorlesungsplanFragment extends Fragment implements OnItemSelectedListener {
 	
