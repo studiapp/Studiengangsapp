@@ -46,13 +46,13 @@
 
         </activity>
         <activity android:name=".home.VideoViewActivity" />
-        <activity android:name="de.hfu.mos.RSSReaderFragment">
+        <activity android:name="de.hfu.mos.home.news.RSSReaderFragment">
         </activity>
         <activity android:name="de.hfu.mos.SensorFragment">
         </activity>
-        <activity android:name="de.hfu.mos.POIFragment">
+        <activity android:name="de.hfu.mos.home.map.POIFragment">
 		</activity>
-         <service android:name=".RssService" />
+         <service android:name="de.hfu.mos.home.news.RssService" />
     </application>
 
 </manifest>

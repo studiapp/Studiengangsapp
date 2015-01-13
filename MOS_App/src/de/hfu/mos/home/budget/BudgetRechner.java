@@ -1,5 +1,8 @@
-package de.hfu.mos;
+package de.hfu.mos.home.budget;
 
+import de.hfu.mos.R;
+import de.hfu.mos.R.id;
+import de.hfu.mos.R.layout;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.ListFragment;

@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.home.map;
 
 import android.app.AlertDialog;
 import android.app.Service;

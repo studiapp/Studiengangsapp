@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.home.map;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -35,6 +35,11 @@ import org.osmdroid.views.overlay.ItemizedIconOverlay;
 import org.osmdroid.views.overlay.MyLocationOverlay;
 import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.bonuspack.overlays.Marker;
+
+import de.hfu.mos.R;
+import de.hfu.mos.R.id;
+import de.hfu.mos.R.layout;
+import de.hfu.mos.R.string;
 
 import java.util.ArrayList;
 import java.util.List;

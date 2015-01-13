@@ -1,11 +1,13 @@
-package de.hfu.mos;
+package de.hfu.mos.home.news;
 
 import java.util.List;
 
-import de.hfu.mos.RSSReaderFragment.GetRSSDataTask;
+import de.hfu.mos.R;
+import de.hfu.mos.R.id;
+import de.hfu.mos.R.layout;
 import de.hfu.mos.data.RssItem;
+import de.hfu.mos.home.news.RSSReaderFragment.GetRSSDataTask;
 import de.hfu.mos.listeners.ListListener;
-import de.hfu.mos.util.RssReader;
 import android.R.string;
 import android.app.Fragment;
 import android.app.ListFragment;

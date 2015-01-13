@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.home.news;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,9 +16,12 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import java.util.List;
+
+import de.hfu.mos.R;
+import de.hfu.mos.R.id;
+import de.hfu.mos.R.layout;
 import de.hfu.mos.data.RssItem;
 import de.hfu.mos.listeners.ListListener;
-import de.hfu.mos.util.RssReader;
 import android.view.LayoutInflater;
 
 /**

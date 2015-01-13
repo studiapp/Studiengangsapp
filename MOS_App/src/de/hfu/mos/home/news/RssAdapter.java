@@ -1,7 +1,10 @@
-package de.hfu.mos;
+package de.hfu.mos.home.news;
 
 import java.util.List;
 
+import de.hfu.mos.R;
+import de.hfu.mos.R.id;
+import de.hfu.mos.R.layout;
 import de.hfu.mos.data.RssItem;
 
 import android.content.Context;

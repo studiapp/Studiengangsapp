@@ -1,4 +1,4 @@
-package de.hfu.mos;
+package de.hfu.mos.home.budget;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,6 +37,10 @@ import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.model.XYValueSeries;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
+
+import de.hfu.mos.R;
+import de.hfu.mos.R.id;
+import de.hfu.mos.R.layout;
 
 import android.app.Fragment;
 import android.content.Intent;
