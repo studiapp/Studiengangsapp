@@ -1,22 +1,19 @@
-package de.hfu.mos.campus;
+package de.hfu.mos.campus.fragments;
 
+import de.hfu.mos.R;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import de.hfu.mos.R;
 
-public class CampusFragment extends Fragment {
-
+public class CampusButton extends Fragment {
 	
-	public CampusFragment() {
-	}
-
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-		View rootView = inflater.inflate(R.layout.fragment_campus, container, false);
+		
+		View rootView = inflater.inflate(R.layout.campus_button_only, container, false);
 		return rootView;
 	}
 
