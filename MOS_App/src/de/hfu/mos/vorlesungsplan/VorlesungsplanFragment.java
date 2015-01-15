@@ -12,7 +12,6 @@ import java.util.Vector;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.lang.String;
 
 import net.fortuna.ical4j.data.CalendarBuilder;
 import net.fortuna.ical4j.model.Calendar;
@@ -27,10 +26,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
 import android.app.Fragment;
-import android.content.Context;
 import android.graphics.Typeface;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -50,11 +46,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
-import de.hfu.mos.R.array;
-import de.hfu.mos.R.color;
-import de.hfu.mos.R.id;
-import de.hfu.mos.R.layout;
-import de.hfu.mos.R.string;
 import de.hfu.mos.vorlesungsplan.quicksort.QuickSortCalendar;
 
 public class VorlesungsplanFragment extends Fragment implements OnItemSelectedListener {
@@ -336,7 +327,7 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 				file = null;
 				_AngezeigterPlan.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
 				_AngezeigterPlan.setText(fileName);
-			} catch (InterruptedException | ExecutionException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
