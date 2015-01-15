@@ -25,7 +25,7 @@ import de.hfu.mos.fakultaet.InformatikFragment;
 import de.hfu.mos.home.FelixFragment;
 import de.hfu.mos.home.HomeFragment;
 import de.hfu.mos.home.budget.BudgetRechner;
-import de.hfu.mos.home.map.POIFragment;
+import de.hfu.mos.campus.map.POIFragment;
 import de.hfu.mos.home.news.RSSFragment;
 import de.hfu.mos.kontakte.KontaktFragment;
 import de.hfu.mos.studiengang.StudiengangFragment;

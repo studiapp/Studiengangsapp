@@ -8,7 +8,7 @@ import java.util.List;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import de.hfu.mos.data.RssItem;
+import de.hfu.mos.home.news.data.RssItem;
 
 import android.util.Xml;
 

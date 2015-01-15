@@ -8,18 +8,13 @@ import java.util.List;
 
 import org.xmlpull.v1.XmlPullParserException;
 
-import de.hfu.mos.data.RssItem;
+import de.hfu.mos.home.news.data.RssItem;
 
 import android.app.IntentService;
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.ResultReceiver;
-import android.provider.SyncStateContract.Constants;
 import android.util.Log;
-import android.widget.Toast;
 
 public class RssService extends IntentService {
 	 

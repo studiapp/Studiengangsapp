@@ -50,7 +50,7 @@
         </activity>
         <activity android:name="de.hfu.mos.SensorFragment">
         </activity>
-        <activity android:name="de.hfu.mos.home.map.POIFragment">
+        <activity android:name=".campus.map.POIFragment">
 		</activity>
          <service android:name="de.hfu.mos.home.news.RssService" />
     </application>

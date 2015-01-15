@@ -151,6 +151,36 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/buttonBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/HFULight"
+                    android:onClick="onClick"
+                    android:text="Master vs. Bachelor\nBudgetrechner"
+                    android:textColor="@color/White"
+                    android:textSize="25sp" />
+
+                <!-- <Button
+                    android:id="@+id/buttonMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/HFULight"
+                    android:onClick="onClick"
+                    android:text="Map."
+                    android:textColor="@color/White"
+                    android:textSize="25sp" /> -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
                     android:id="@+id/rssreader"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -159,9 +189,9 @@
                     android:layout_weight="1"
                     android:background="@color/HFULight"
                     android:onClick="onClick"
-                    android:text="News."
+                    android:text="HFU\nNews"
                     android:textColor="@color/White"
-                    android:textSize="25dp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/buttonFelix"
@@ -171,41 +201,11 @@
                     android:layout_weight="1"
                     android:background="@color/HFULight"
                     android:onClick="onClick"
-                    android:text="Felix."
-                    android:textColor="@color/White"
-                    android:textSize="25dp" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/buttonBudget"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="3dp"
-                    android:layout_weight="1"
-                    android:background="@color/HFULight"
-                    android:onClick="onClick"
-                    android:text="Budget."
-                    android:textColor="@color/White"
-                    android:textSize="25dp" />
-
-                <Button
-                    android:id="@+id/buttonMap"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/HFULight"
-                    android:onClick="onClick"
-                    android:text="Map."
+                    android:text="Felix"
                     android:textColor="@color/White"
                     android:textSize="25sp" />
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

@@ -1,6 +1,6 @@
 package de.hfu.mos.home.news;
 
-import de.hfu.mos.data.RssItem;
+import de.hfu.mos.home.news.data.RssItem;
 
 import java.util.List;
 

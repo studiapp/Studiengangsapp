@@ -19,14 +19,16 @@ public class CampusFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-		// View rootView = inflater.inflate(R.layout.fragment_campus, container, false);
+		View rootView = inflater.inflate(R.layout.fragment_campus, container, false);
 
         TouchImageView img = new TouchImageView(getActivity());
         img.setImageResource(R.drawable.ic_campus_lageplan);
         img.setMaxZoom(4f);
 
+        // Wenn nur Bild OHNE Map Button, damit Bild zoomable ist
+        // return img
 		
-		return img;
+		return rootView;
 	}
 
 }

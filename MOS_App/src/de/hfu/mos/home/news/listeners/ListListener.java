@@ -1,4 +1,4 @@
-package de.hfu.mos.listeners;
+package de.hfu.mos.home.news.listeners;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.net.Uri;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import de.hfu.mos.data.RssItem;
+import de.hfu.mos.home.news.data.RssItem;
 import java.util.List;
 
 

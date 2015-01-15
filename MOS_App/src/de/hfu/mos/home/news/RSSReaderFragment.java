@@ -10,19 +10,14 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.view.View;
-import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
 import java.util.List;
 
 import de.hfu.mos.R;
 import de.hfu.mos.R.id;
 import de.hfu.mos.R.layout;
-import de.hfu.mos.data.RssItem;
-import de.hfu.mos.listeners.ListListener;
-import android.view.LayoutInflater;
+import de.hfu.mos.home.news.data.RssItem;
+import de.hfu.mos.home.news.listeners.ListListener;
 
 /**
  * Created by Michael on 29.10.2014.
