@@ -10,14 +10,14 @@
     android:background="#FFFFFF">
 
     <fragment
-        android:id="@+id/list"
+        android:id="@+id/campus_mapFragment"
         android:name="de.hfu.mos.campus.fragments.CampusMap"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
     <fragment
-        android:id="@+id/viewer"
+        android:id="@+id/campus_buttonFragment"
         android:name="de.hfu.mos.campus.fragments.CampusButton"
         android:layout_width="match_parent"
         android:layout_height="70dp" />
