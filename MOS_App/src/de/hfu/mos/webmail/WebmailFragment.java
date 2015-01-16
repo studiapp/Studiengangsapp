@@ -3,6 +3,7 @@ package de.hfu.mos.webmail;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import de.hfu.mos.ConnectionDetector;
@@ -117,15 +119,16 @@ public class WebmailFragment extends Fragment {
 
 //		_WebView.setDownloadListener(test);
 		
-		_WebView.getSettings().setJavaScriptEnabled(true);
+		WebSettings settings = _WebView.getSettings();
+		settings.setJavaScriptEnabled(true);
 
-		_WebView.getSettings().setUseWideViewPort(true);
+		settings.setUseWideViewPort(true);
 
-		_WebView.getSettings().setLoadWithOverviewMode(true);
+		settings.setLoadWithOverviewMode(true);
 
-		_WebView.getSettings().setBuiltInZoomControls(true);
+		settings.setBuiltInZoomControls(true);
 
-		_WebView.getSettings().setDisplayZoomControls(false);
+		settings.setDisplayZoomControls(false);
 
 		_WebView.setWebViewClient(new WebViewClient());
 

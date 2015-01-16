@@ -1,5 +1,6 @@
 package de.hfu.mos.home;
 
+import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
 import android.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.CookieManager;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import de.hfu.mos.ConnectionDetector;
@@ -64,17 +66,21 @@ public class FelixFragment extends Fragment {
     }
 	
     //Handles webView:
+	@SuppressLint("SetJavaScriptEnabled")
+	// javascript needed to make navigation work
 	public void webLogin() {
 
-		//_WebView.getSettings().setJavaScriptEnabled(true);
+		WebSettings settings = _WebView.getSettings();
+		
+		settings.setJavaScriptEnabled(true);
 
-		_WebView.getSettings().setUseWideViewPort(true);
+		settings.setUseWideViewPort(true);
 
-		_WebView.getSettings().setLoadWithOverviewMode(true);
+		settings.setLoadWithOverviewMode(true);
 
-		_WebView.getSettings().setBuiltInZoomControls(true);
+		settings.setBuiltInZoomControls(true);
 
-		_WebView.getSettings().setDisplayZoomControls(false);
+		settings.setDisplayZoomControls(false);
 
 		_WebView.setWebViewClient(new WebViewClient() {
 
