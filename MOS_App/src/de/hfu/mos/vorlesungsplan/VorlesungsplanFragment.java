@@ -75,9 +75,14 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 		
 		_DownloadManager = dm;
 	}
+	
+	public VorlesungsplanFragment() {
+		
+	}
 
 	//For this function we use the .ics File provided by the HFU website/schedule.
 	//to be able to read and work with the entries of the ics File, we use the opensource libary iCal4j
+	//detailed description can be found in the documentary
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -164,7 +169,7 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 	@Override
 	protected Void doInBackground(String... url) {
 
-		
+		//gets the html code of the website that contains download link to file
 			try {
 				HttpClient client = new DefaultHttpClient();
 				HttpGet request = new HttpGet(url[0]);
@@ -189,6 +194,8 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 	
 	@Override
 		protected void onPostExecute(Void result) {
+		
+		//looks for the download link in html code
 			Pattern p = Pattern.compile("/splan/ical[^\"]*");
 			Matcher m = p.matcher(html);
 			if (m.find()){
@@ -227,6 +234,7 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 	}
 	//The entries in the ics file are sorted by the Event and not by date
 	//here we sort the content by date
+	@SuppressWarnings("unchecked")
 	private Vector<Component> sortData(Calendar cal) throws ParseException{
 		
 		Vector<Component> tempList = new Vector<Component>();
@@ -497,7 +505,8 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 		
 	}
 	
-private void setFileName() throws InterruptedException, ExecutionException{
+	//sets the filename according to the spinner selection
+	private void setFileName() throws InterruptedException, ExecutionException{
 		
 		if(_SpinnerSemester.getSelectedItemPosition() == adapterSemster.getPosition("AIB1")){
 			fileName = "Vorlesungsplan_"+ getActivity().getString(R.string.AIB1)+".ics";
@@ -612,7 +621,8 @@ private void setFileName() throws InterruptedException, ExecutionException{
 
 	}
 	
-private void getFileLinkAndShowFile(){
+	//starts the task to search for link in htm code and download that file
+	private void getFileLinkAndShowFile(){
 		
 		if(_SpinnerSemester.getSelectedItemPosition() == adapterSemster.getPosition("AIB1")){
 			asynkTaskHTML = new DownloadFileAndShow();

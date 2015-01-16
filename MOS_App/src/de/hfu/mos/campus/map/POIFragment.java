@@ -1,11 +1,5 @@
 package de.hfu.mos.campus.map;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
 import org.osmdroid.DefaultResourceProxyImpl;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.views.MapView;
@@ -13,10 +7,12 @@ import org.osmdroid.views.overlay.ItemizedIconOverlay;
 import org.osmdroid.views.overlay.MyLocationOverlay;
 import org.osmdroid.views.overlay.OverlayItem;
 
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
 import de.hfu.mos.R;
-import de.hfu.mos.R.id;
-import de.hfu.mos.R.layout;
-import de.hfu.mos.R.string;
 
 public class POIFragment extends Activity implements View.OnClickListener, ItemizedIconOverlay.OnItemGestureListener<OverlayItem> {
     

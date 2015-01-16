@@ -241,7 +241,7 @@ public class MainActivity extends Activity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 fragment = new WebsiteFragment(query);
-                openFragment(fragment, 6);
+                openFragment(fragment, 8);
                 return false;
             }
 

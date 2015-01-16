@@ -1,9 +1,7 @@
 package de.hfu.mos.website;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,6 +61,8 @@ public class WebsiteFragment extends Fragment {
     }
 	
     //Handles webView:
+	@SuppressLint("SetJavaScriptEnabled")
+	//javascript enables better navigation of the website
 	public void loadWebsite() {
 
 		_WebView.getSettings().setJavaScriptEnabled(true);

@@ -7,15 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import de.hfu.mos.R;
 
 public class HomeFragment extends Fragment {
 
-    Button buttonTest;
     ImageView _mosVideo;
 
     // Video
@@ -27,21 +23,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-
-        buttonTest = (Button) rootView.findViewById(R.id.buttonFelix);
-
-        OnClickListener oni = new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                test(v);
-
-            }
-        };
-
-
-        //buttonTest.setOnClickListener(oni);
 
         // Video
 
@@ -58,9 +39,4 @@ public class HomeFragment extends Fragment {
         return rootView;
     }
 
-
-    public void test(View v) {
-
-        Toast.makeText(getActivity(), "Funtzt!", Toast.LENGTH_SHORT).show();
-    }
 }

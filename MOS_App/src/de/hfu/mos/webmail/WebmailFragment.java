@@ -3,7 +3,7 @@ package de.hfu.mos.webmail;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -111,6 +111,8 @@ public class WebmailFragment extends Fragment {
     }
 	
     //Handles webView:
+	@SuppressLint("SetJavaScriptEnabled")
+	//javascript needed for login
 	public void webLogin() {
 
 //		_WebView.setDownloadListener(test);

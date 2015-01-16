@@ -17,6 +17,10 @@ import android.widget.Toast;
 import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
 
+
+//downloads the modules of the different courses
+//everything else is done in the XML file
+
 public class StudiengangFragment extends Fragment {
 	
 	private Button buttonS3M1_5, buttonS2M1, buttonS2M2, buttonS2M3, buttonS2M4, buttonS2M5,
@@ -30,11 +34,15 @@ public class StudiengangFragment extends Fragment {
 		
 		_DownloadManager = dm;
 	}
+	
+	public StudiengangFragment() {
+	
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-		View rootView = inflater.inflate(R.layout.fragment_studiengang, container, false);;
+		View rootView = inflater.inflate(R.layout.fragment_studiengang, container, false);
 		
 		OnClickListener clickListener = new OnClickListener() {
 			

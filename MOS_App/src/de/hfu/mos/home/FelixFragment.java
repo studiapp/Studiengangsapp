@@ -3,9 +3,6 @@ package de.hfu.mos.home;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
 import android.app.Fragment;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -30,6 +27,10 @@ public class FelixFragment extends Fragment {
 	public FelixFragment(DownloadManager dm) {
 
 		_DownloadManager = dm;
+	}
+	
+	public FelixFragment() {
+	
 	}
 	
 	@Override
@@ -65,7 +66,7 @@ public class FelixFragment extends Fragment {
     //Handles webView:
 	public void webLogin() {
 
-		_WebView.getSettings().setJavaScriptEnabled(true);
+		//_WebView.getSettings().setJavaScriptEnabled(true);
 
 		_WebView.getSettings().setUseWideViewPort(true);
 

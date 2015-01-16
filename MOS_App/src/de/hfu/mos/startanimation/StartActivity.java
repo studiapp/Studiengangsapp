@@ -1,6 +1,9 @@
 package de.hfu.mos.startanimation;
 
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,29 +14,32 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-
-import java.util.Timer;
-import java.util.TimerTask;
-
+import android.widget.RelativeLayout;
 import de.hfu.mos.MainActivity;
 import de.hfu.mos.R;
 
 public class StartActivity extends Activity implements
         AnimationListener {
 
-    ImageView img1;
-    ImageView img2;
-
+    private ImageView img1;
+    private ImageView img2;
+    private RelativeLayout layout;
+    
     // Animation
-    Animation animFadein;
-    Animation animFadein2;
+    private Animation animFadein;
+    private Animation animFadein2;
+    
+    //used to cancel startanimation if you click on it
+    private android.view.View.OnClickListener clickListener;
+    private Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        new Timer().schedule(new TimerTask(){
+        timer = new Timer(); 
+        timer.schedule(new TimerTask(){
             public void run() {
                 StartActivity.this.runOnUiThread(new Runnable() {
                     public void run() {
@@ -47,6 +53,7 @@ public class StartActivity extends Activity implements
 
         img1 = (ImageView) findViewById(R.id.imgHFU);
         img2 = (ImageView) findViewById(R.id.imgMOS);
+        layout = (RelativeLayout) findViewById(R.id.startAnimLayout);
 
         // load the animation
         animFadein = AnimationUtils.loadAnimation(getApplicationContext(),
@@ -65,6 +72,23 @@ public class StartActivity extends Activity implements
         // start the animation
         img1.startAnimation(animFadein);
         img2.startAnimation(animFadein2);
+        
+        
+        // end animation if clicked somewhere
+        clickListener = new android.view.View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				timer.cancel();
+				timer.purge();
+				startActivity(new Intent(StartActivity.this, MainActivity.class));
+                finish();				
+			}
+		};
+		
+		img1.setOnClickListener(clickListener);
+		img2.setOnClickListener(clickListener);
+		layout.setOnClickListener(clickListener);
 
     }
 

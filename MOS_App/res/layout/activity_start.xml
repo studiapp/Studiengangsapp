@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:clickable="true" 
+    android:id="@+id/startAnimLayout">
 
     <ImageView
         android:id="@+id/imgHFU"
@@ -13,7 +15,8 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/logo_hfu"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:clickable="true" />
     
     <ImageView
         android:id="@+id/imgMOS"
@@ -24,6 +27,7 @@
         android:layout_marginTop="40dp"
         android:layout_below="@id/imgHFU"
         android:src="@drawable/logo_mos"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:clickable="true" />
 
 </RelativeLayout>
