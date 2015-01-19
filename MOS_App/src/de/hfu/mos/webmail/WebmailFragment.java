@@ -1,4 +1,4 @@
-package de.hfu.mos.webmail;
+﻿package de.hfu.mos.webmail;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package de.hfu.mos.campus.fragments;
+﻿package de.hfu.mos.campus.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;

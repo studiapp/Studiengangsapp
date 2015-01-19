@@ -1,4 +1,4 @@
-package de.hfu.mos.kontakte;
+﻿package de.hfu.mos.kontakte;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;

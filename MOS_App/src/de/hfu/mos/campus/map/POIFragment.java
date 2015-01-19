@@ -1,4 +1,4 @@
-package de.hfu.mos.campus.map;
+﻿package de.hfu.mos.campus.map;
 
 import org.osmdroid.DefaultResourceProxyImpl;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;

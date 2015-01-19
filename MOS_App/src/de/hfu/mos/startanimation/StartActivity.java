@@ -1,4 +1,4 @@
-package de.hfu.mos.startanimation;
+﻿package de.hfu.mos.startanimation;
 
 
 import java.util.Timer;

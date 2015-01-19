@@ -1,4 +1,4 @@
-package de.hfu.mos.vorlesungsplan.quicksort;
+﻿package de.hfu.mos.vorlesungsplan.quicksort;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package de.hfu.mos.kontakte.adapter;
+﻿package de.hfu.mos.kontakte.adapter;
 
 /**
  * Created by gera on 21.12.14.

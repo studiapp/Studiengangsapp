@@ -1,4 +1,4 @@
-package de.hfu.mos.campus;
+﻿package de.hfu.mos.campus;
 
 /**
  * Created by gera on 23.12.14.

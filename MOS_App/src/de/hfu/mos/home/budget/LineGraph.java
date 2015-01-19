@@ -1,10 +1,9 @@
-package de.hfu.mos.home.budget;
+Ôªøpackage de.hfu.mos.home.budget;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.achartengine.ChartFactory;
-import org.achartengine.GraphicalView;
 import org.achartengine.chart.PointStyle;
 import org.achartengine.model.TimeSeries;
 import org.achartengine.model.XYMultipleSeriesDataset;
@@ -13,44 +12,15 @@ import org.achartengine.renderer.XYSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer.FillOutsideLine;
 
 import android.app.Fragment;
-import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-
-import org.achartengine.ChartFactory;
-import org.achartengine.GraphicalView;
-import org.achartengine.model.XYMultipleSeriesDataset;
-import org.achartengine.model.XYValueSeries;
-import org.achartengine.renderer.XYMultipleSeriesRenderer;
-import org.achartengine.renderer.XYSeriesRenderer;
-
 import de.hfu.mos.R;
-import de.hfu.mos.R.id;
-import de.hfu.mos.R.layout;
-
-import android.app.Fragment;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.LinearLayout;
 
 
 public class LineGraph extends Fragment{
@@ -63,7 +33,7 @@ public TextView header;
 public int eigeneberb;
 public int eigeneberm;
 
-@SuppressWarnings("deprecation")
+//@SuppressWarnings("deprecation")
 @Override
 public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -77,10 +47,10 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 		if(counter == 0){
 		//BACHELOR
 		int[] x = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};	
-		TimeSeries series = new TimeSeries("Abschluﬂ Bachelor ");
+		TimeSeries series = new TimeSeries("Abschlu√ü Bachelor ");
 		for(int i = 0; i < x.length; i = i+2){
 			series.add(x[i],coordinates.get(i));
-			// Linienst‰rke
+			// LinienstÔøΩrke
 			renderer.setLineWidth(5f);
 			renderer.setPointStyle(PointStyle.SQUARE);
 			renderer.setFillPoints(true);
@@ -92,10 +62,10 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 		//MASTER		
 		int[] a = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};
 		//int[] b = {28,30,35,50,90,110};		
-		TimeSeries series2 = new TimeSeries("Abschluﬂ Master");
+		TimeSeries series2 = new TimeSeries("Abschlu√ü Master");
 		for(int c = 1; c < a.length; c = c+2){
 			series2.add(a[c],coordinates.get(c));
-			//Linienst‰rke
+			//LinienstÔøΩrke
 			renderer2.setLineWidth(5f);
 			renderer.setChartValuesTextSize(50);
 		}	
@@ -110,12 +80,12 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 			// BACHELOR
 			int[] x = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};
 			float eingangswertb = (float) eigeneberb;		
-			TimeSeries series = new TimeSeries("Abschluﬂ Bachelor ");
+			TimeSeries series = new TimeSeries("Abschlu√ü Bachelor ");
 				series.add(25,eingangswertb);
 			for(int i = 2; i < x.length; i = i+2){
 				eingangswertb = (float) (eingangswertb * 1.2);
 				series.add(x[i],eingangswertb);
-				//Linienst‰rke
+				//LinienstÔøΩrke
 				renderer.setLineWidth(5f);
 				renderer.setPointStyle(PointStyle.SQUARE);
 				renderer.setFillPoints(true);
@@ -127,13 +97,13 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 			// MASTER		
 			int[] a = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};
 			float eingangswertm = (float) eigeneberm;	
-			TimeSeries series2 = new TimeSeries("Abschluﬂ Master");
+			TimeSeries series2 = new TimeSeries("Abschlu√ü Master");
 			series2.add(25, 0);
 			series2.add(27, eingangswertm);
 			for(int c = 5; c < a.length; c = c+2){
 				eingangswertm = (float) (eingangswertm * 1.2);
 				series2.add(x[c],eingangswertm);;
-				//Linienst‰rke
+				//LinienstÔøΩrke
 				renderer2.setLineWidth(5f);
 				renderer.setChartValuesTextSize(50);
 			}	
@@ -158,7 +128,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 		mRenderer.setLabelsTextSize(40);
 		mRenderer.setAxisTitleTextSize(40);
 		mRenderer.setXTitle("Alter in Jahren");
-		mRenderer.setYTitle("Gehalt in Ä");
+		mRenderer.setYTitle("Gehalt in ‚Ç¨");
 		//mRenderer.setLegendHeight(80);
 		//renderer.setMargins(new int[] { top, left, bottom, right });
 		mRenderer.setMargins(new int[] {0, 60, 90,0});		

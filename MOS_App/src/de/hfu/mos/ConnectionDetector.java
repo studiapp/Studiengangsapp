@@ -1,4 +1,4 @@
-package de.hfu.mos;
+﻿package de.hfu.mos;
 
 import android.app.Activity;
 import android.content.Context;

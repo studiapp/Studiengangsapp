@@ -1,4 +1,4 @@
-package de.hfu.mos;
+﻿package de.hfu.mos;
 
 import android.app.Activity;
 import android.app.DownloadManager;
@@ -227,7 +227,6 @@ public class MainActivity extends Activity {
     }
 
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -254,12 +253,6 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    @Override
-    public boolean onSearchRequested() {
-
-
-        return super.onSearchRequested();
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

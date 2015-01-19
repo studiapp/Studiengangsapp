@@ -1,4 +1,4 @@
-package de.hfu.mos.fakultaet;
+﻿package de.hfu.mos.fakultaet;
 
 import java.io.File;
 
