@@ -8,12 +8,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
 
 public class HomeFragment extends Fragment {
 
     ImageView _mosVideo;
-
+    
     // Video
 
     public HomeFragment() {
@@ -31,8 +34,12 @@ public class HomeFragment extends Fragment {
         _mosVideo.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(getActivity(), VideoViewActivity.class);
-                startActivity(myIntent);
+                if (!(ConnectionDetector.isOnline(getActivity()))) {
+                    Toast.makeText(getActivity(), "Sorry, no Internet available", Toast.LENGTH_LONG).show();
+                } else {
+                    Intent myIntent = new Intent(getActivity(), VideoViewActivity.class);
+                    startActivity(myIntent);
+                }
             }
         });
 
