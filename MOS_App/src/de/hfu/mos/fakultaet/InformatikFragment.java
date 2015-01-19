@@ -14,7 +14,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-
+import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
 
 public class InformatikFragment extends Fragment {
@@ -34,7 +34,6 @@ public class InformatikFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_informatik, container, false);
-        ;
 
         OnClickListener clickListener = new OnClickListener() {
 
@@ -66,31 +65,33 @@ public class InformatikFragment extends Fragment {
 
     private void doOnClick(View v) {
 
-        switch (v.getId()) {
-
-            case R.id.ButtonAIB:
-                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/2014-06_Flyer_AIB-web.pdf";
-                downloadModul(url);
-                break;
-            case R.id.ButtonCNB:
-                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/Flyer-CNB-web.pdf";
-                downloadModul(url);
-                break;
-            case R.id.ButtonSPB:
-                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/2014-06_Flyer_SPB-web.pdf";
-                downloadModul(url);
-                break;
-            case R.id.ButtonINM:
-                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/Flyer-INM-web.pdf";
-                downloadModul(url);
-                break;
-            case R.id.ButtonMOS:
-                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/Flyer_MOS-web.pdf";
-                downloadModul(url);
-                break;
-            default:
-                Toast.makeText(getActivity(), "Irgendwas ging schief", Toast.LENGTH_SHORT).show();
-        }
+		if(ConnectionDetector.isOnline(getActivity()))	
+	        switch (v.getId()) {
+	
+	            case R.id.ButtonAIB:
+	                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/2014-06_Flyer_AIB-web.pdf";
+	                downloadModul(url);
+	                break;
+	            case R.id.ButtonCNB:
+	                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/Flyer-CNB-web.pdf";
+	                downloadModul(url);
+	                break;
+	            case R.id.ButtonSPB:
+	                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/2014-06_Flyer_SPB-web.pdf";
+	                downloadModul(url);
+	                break;
+	            case R.id.ButtonINM:
+	                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/Flyer-INM-web.pdf";
+	                downloadModul(url);
+	                break;
+	            case R.id.ButtonMOS:
+	                url = "https://marke.hs-furtwangen.de/fileadmin/user_upload/Print/Studiengangsflyer/Online_Version/Flyer_MOS-web.pdf";
+	                downloadModul(url);
+	                break;
+	            default:
+	                Toast.makeText(getActivity(), "Irgendwas ging schief", Toast.LENGTH_SHORT).show();
+	        }
+        else Toast.makeText(getActivity(), "No Internet available", Toast.LENGTH_SHORT).show();
     }
 
     private void downloadModul(String linkModul) {

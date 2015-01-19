@@ -2,16 +2,13 @@
 
 import java.util.List;
 
-import de.hfu.mos.R;
-import de.hfu.mos.R.id;
-import de.hfu.mos.R.layout;
-import de.hfu.mos.home.news.data.RssItem;
-
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import de.hfu.mos.R;
+import de.hfu.mos.home.news.data.RssItem;
 
 public class RssAdapter extends BaseAdapter {
 	 

@@ -2,16 +2,8 @@
 
 import java.util.List;
 
-import de.hfu.mos.R;
-import de.hfu.mos.R.id;
-import de.hfu.mos.R.layout;
-import de.hfu.mos.home.news.data.RssItem;
-
 import android.app.Fragment;
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,6 +16,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import de.hfu.mos.ConnectionDetector;
+import de.hfu.mos.R;
+import de.hfu.mos.home.news.data.RssItem;
 
 public class RSSFragment extends Fragment implements OnItemClickListener{
 	 
@@ -57,7 +52,7 @@ public class RSSFragment extends Fragment implements OnItemClickListener{
     }
  
     private void startService() {
-    	if(isOnline()){
+    	if(ConnectionDetector.isOnline(getActivity())){
         Intent intent = new Intent(getActivity(), RssService.class);
         intent.putExtra(RssService.RECEIVER, resultReceiver);
         getActivity().startService(intent);
@@ -97,11 +92,4 @@ public class RSSFragment extends Fragment implements OnItemClickListener{
         startActivity(intent);
     }
     
-	//looks for onlinestate //Redundanz WebMail <-> FelixLogin <-> Website
-    public boolean isOnline() {
-        ConnectivityManager cm =
-                (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
-    }
 }

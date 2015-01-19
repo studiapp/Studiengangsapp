@@ -1,21 +1,16 @@
 ﻿package de.hfu.mos.home.news;
 
+import java.util.List;
+
 import android.app.Activity;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import java.util.List;
-
+import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
-import de.hfu.mos.R.id;
-import de.hfu.mos.R.layout;
 import de.hfu.mos.home.news.data.RssItem;
 import de.hfu.mos.home.news.listeners.ListListener;
 
@@ -40,26 +35,14 @@ public class RSSReaderFragment extends Activity{// A reference to the local obje
         GetRSSDataTask task = new GetRSSDataTask();
 
         // Start download RSS task
-        if(isOnline())
-        task.execute("http://www.hs-furtwangen.de/willkommen.html?type=100");
+        if(ConnectionDetector.isOnline(this))
+        	task.execute("http://www.hs-furtwangen.de/willkommen.html?type=100");
         else{
-        	Toast toast = null;
-        	toast.setText("No Internet connection");
-        	toast.show();
+        	Toast.makeText(this, "No Internet connection", Toast.LENGTH_SHORT).show();
         }
         // Debug the thread name
         Log.d("hfureader", Thread.currentThread().getName());
-    }
-
-    
-	//looks for onlinestate //Redundanz WebMail <-> FelixLogin <-> Website
-    public boolean isOnline() {
-        ConnectivityManager cm =
-                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
-    }
-    
+    }  
     
     public class GetRSSDataTask extends AsyncTask<String, Void, List<RssItem> > {
         @Override
