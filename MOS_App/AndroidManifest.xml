@@ -45,7 +45,8 @@
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".home.VideoViewActivity" />
+        <activity android:name=".home.VideoViewActivity"
+            android:screenOrientation="landscape" />
         <activity android:name="de.hfu.mos.home.news.RSSReaderFragment">
         </activity>
         <activity android:name="de.hfu.mos.SensorFragment">
