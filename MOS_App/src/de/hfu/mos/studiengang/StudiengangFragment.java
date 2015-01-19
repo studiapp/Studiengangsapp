@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.studiengang;
+package de.hfu.mos.studiengang;
 
 import java.io.File;
 

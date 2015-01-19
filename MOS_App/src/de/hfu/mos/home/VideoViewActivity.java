@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.home;
+package de.hfu.mos.home;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;

@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.home.news.data;
+package de.hfu.mos.home.news.data;
 
 
 public class RssItem {

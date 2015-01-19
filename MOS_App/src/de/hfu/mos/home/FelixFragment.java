@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.home;
+package de.hfu.mos.home;
 
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;

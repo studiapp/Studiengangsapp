@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.home.news;
+package de.hfu.mos.home.news;
 
 import de.hfu.mos.home.news.data.RssItem;
 

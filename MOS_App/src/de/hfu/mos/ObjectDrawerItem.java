@@ -1,4 +1,4 @@
-﻿package de.hfu.mos;
+package de.hfu.mos;
 
 public class ObjectDrawerItem {
 

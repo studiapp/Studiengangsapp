@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.vorlesungsplan;
+package de.hfu.mos.vorlesungsplan;
 
 import java.io.BufferedReader;
 import java.io.File;

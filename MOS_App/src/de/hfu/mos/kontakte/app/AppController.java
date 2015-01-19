@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.kontakte.app;
+package de.hfu.mos.kontakte.app;
 
 /**
  * Created by gera on 21.12.14.

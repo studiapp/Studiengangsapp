@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.kontakte.model;
+package de.hfu.mos.kontakte.model;
 
 /**
  * Created by gera on 21.12.14.

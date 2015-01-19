@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.home.budget;
+package de.hfu.mos.home.budget;
 
 import android.app.Fragment;
 import android.app.FragmentManager;

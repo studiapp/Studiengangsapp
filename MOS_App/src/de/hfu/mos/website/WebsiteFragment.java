@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.website;
+package de.hfu.mos.website;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;

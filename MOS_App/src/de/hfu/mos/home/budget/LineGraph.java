@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.home.budget;
+package de.hfu.mos.home.budget;
 
 import java.util.ArrayList;
 import java.util.Arrays;

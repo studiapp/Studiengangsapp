@@ -1,4 +1,4 @@
-﻿package de.hfu.mos;
+package de.hfu.mos;
 
 import de.hfu.mos.R;
 

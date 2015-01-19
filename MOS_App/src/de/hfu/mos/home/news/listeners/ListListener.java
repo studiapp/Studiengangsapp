@@ -1,4 +1,4 @@
-﻿package de.hfu.mos.home.news.listeners;
+package de.hfu.mos.home.news.listeners;
 
 import android.app.Activity;
 import android.content.Intent;
