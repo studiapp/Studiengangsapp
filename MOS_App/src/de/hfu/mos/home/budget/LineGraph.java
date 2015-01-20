@@ -47,7 +47,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 		if(counter == 0){
 		//BACHELOR
 		int[] x = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};	
-		TimeSeries series = new TimeSeries("Abschluß Bachelor ");
+		TimeSeries series = new TimeSeries("Abschluss Bachelor ");
 		for(int i = 0; i < x.length; i = i+2){
 			series.add(x[i],coordinates.get(i));
 			// Linienst�rke
@@ -62,7 +62,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 		//MASTER		
 		int[] a = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};
 		//int[] b = {28,30,35,50,90,110};		
-		TimeSeries series2 = new TimeSeries("Abschluß Master");
+		TimeSeries series2 = new TimeSeries("Abschluss Master");
 		for(int c = 1; c < a.length; c = c+2){
 			series2.add(a[c],coordinates.get(c));
 			//Linienst�rke
@@ -80,7 +80,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 			// BACHELOR
 			int[] x = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};
 			float eingangswertb = (float) eigeneberb;		
-			TimeSeries series = new TimeSeries("Abschluß Bachelor ");
+			TimeSeries series = new TimeSeries("Abschluss Bachelor ");
 				series.add(25,eingangswertb);
 			for(int i = 2; i < x.length; i = i+2){
 				eingangswertb = (float) (eingangswertb * 1.2);
@@ -97,7 +97,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 			// MASTER		
 			int[] a = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};
 			float eingangswertm = (float) eigeneberm;	
-			TimeSeries series2 = new TimeSeries("Abschluß Master");
+			TimeSeries series2 = new TimeSeries("Abschluss Master");
 			series2.add(25, 0);
 			series2.add(27, eingangswertm);
 			for(int c = 5; c < a.length; c = c+2){
@@ -128,7 +128,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 		mRenderer.setLabelsTextSize(40);
 		mRenderer.setAxisTitleTextSize(40);
 		mRenderer.setXTitle("Alter in Jahren");
-		mRenderer.setYTitle("Gehalt in €");
+		mRenderer.setYTitle("Gehalt in Euro");
 		//mRenderer.setLegendHeight(80);
 		//renderer.setMargins(new int[] { top, left, bottom, right });
 		mRenderer.setMargins(new int[] {0, 60, 90,0});		

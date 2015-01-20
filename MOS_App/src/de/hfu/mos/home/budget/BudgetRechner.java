@@ -96,23 +96,23 @@ public class BudgetRechner extends Fragment implements View.OnClickListener  {
 	    	switch(v.getId()){   	
 	    	// IT-Consulting
 	    	case R.id.cn:	    		
-	    		fragment = new LineGraph("IT-Consulting","Bacheloreinstiegsgehalt: 40.494,00 €",0,-12360,-22008,-7379,-22008,218,-10731,13245,8474,26765,28244,33655,42195,40043,49472,47096,57506,54883,66376,63480,76170);
+	    		fragment = new LineGraph("IT-Consulting","Bacheloreinstiegsgehalt: 40.494,00 Euro",0,-12360,-22008,-7379,-22008,218,-10731,13245,8474,26765,28244,33655,42195,40043,49472,47096,57506,54883,66376,63480,76170);
 	    		break;
 	        // Anwender Support
 	    	case R.id.ai:
-	    		fragment = new LineGraph("Anwender Support","Bacheloreinstiegsgehalt:  40.193,00 €",0,-12667,-22008,-7698,-22008,-120,-10731,12870,8474,26352,28244,33199,42195,39539,49472,46540,57506,54269,66376,62802,76170);
+	    		fragment = new LineGraph("Anwender Support","Bacheloreinstiegsgehalt:  40.193,00 Euro",0,-12667,-22008,-7698,-22008,-120,-10731,12870,8474,26352,28244,33199,42195,39539,49472,46540,57506,54269,66376,62802,76170);
 	    		break; 
 	        // Netzwerk
 	    	case R.id.spb:
-	    		fragment = new LineGraph("Netzwerke","Bacheloreinstiegsgehalt: 40.299,00 €",0,-12559,-22009,-7586,-22008,0,-10731,13002,8474,26497,28244,33359,42195,39717,49472,46735,57506,54485,66376,63041,76170);
+	    		fragment = new LineGraph("Netzwerke","Bacheloreinstiegsgehalt: 40.299,00 Euro",0,-12559,-22009,-7586,-22008,0,-10731,13002,8474,26497,28244,33359,42195,39717,49472,46735,57506,54485,66376,63041,76170);
 	    		break;
 	    	// Vertrieb-Au�endienst	
 	    	case R.id.verglbachelor:
-	    		fragment = new LineGraph("Vertrieb-Außendienst","Bacheloreinstiegsgehalt: 40.689,00 €",0,-12161,-22008,-7172,-22008,438,-10731,13487,8474,27033,28244,33950,42195,40369,49472,47456,57506,55280,66376,63919,76170);
+	    		fragment = new LineGraph("Vertrieb-Aussendienst","Bacheloreinstiegsgehalt: 40.689,00 Euro",0,-12161,-22008,-7172,-22008,438,-10731,13487,8474,27033,28244,33950,42195,40369,49472,47456,57506,55280,66376,63919,76170);
 	    		break;
 	    	// Softwareentwickler	
 	    	case R.id.mos:
-	    		fragment = new LineGraph("Softwareentwickler","Bacheloreinstiegsgehalt: 40.441,00 €",0,-12414,-22008,-7436,-22008,159,-10731,13179,8474,26692,28244,33575,42195,39954,49472,46998,57506,54775,66376,63361,76170);
+	    		fragment = new LineGraph("Softwareentwickler","Bacheloreinstiegsgehalt: 40.441,00 Euro",0,-12414,-22008,-7436,-22008,159,-10731,13179,8474,26692,28244,33575,42195,39954,49472,46998,57506,54775,66376,63361,76170);
 	    		break;  
 	    	//case R.id.indi:
 
