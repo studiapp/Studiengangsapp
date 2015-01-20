@@ -24,6 +24,7 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 import de.hfu.mos.campus.CampusFragment;
+import de.hfu.mos.campus.map.GoogleMapsActivity;
 import de.hfu.mos.campus.map.POIFragment;
 import de.hfu.mos.fakultaet.InformatikFragment;
 import de.hfu.mos.home.FelixFragment;
@@ -200,8 +201,9 @@ public class MainActivity extends Activity {
                 openFragment(fragment, -3);
                 break;
             case R.id.buttonMap:
-            	Intent hfuMap = new Intent(this,POIFragment.class);
-                startActivity(hfuMap);
+            	//Intent hfuMap = new Intent(this,POIFragment.class);
+                Intent hfuMap = new Intent(this, GoogleMapsActivity.class);
+            	startActivity(hfuMap);
             	break;
             case R.id.buttonFelix:
 	            if(ConnectionDetector.isOnline(ACTIVITY)){
