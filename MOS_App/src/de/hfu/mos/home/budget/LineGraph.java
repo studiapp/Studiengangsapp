@@ -47,7 +47,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sa
 		if(counter == 0){
 		//BACHELOR
 		int[] x = {25,25,27,27,30,30,35,35,40,40,45,45,50,50,55,55,60,60,65,65};	
-		TimeSeries series = new TimeSeries("Abschluss Bachelor ");
+		TimeSeries series = new TimeSeries("Abschluss Bachelor  ");
 		for(int i = 0; i < x.length; i = i+2){
 			series.add(x[i],coordinates.get(i));
 			// Linienst�rke
