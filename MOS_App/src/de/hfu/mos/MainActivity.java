@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.CalendarContract.Instances;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -18,14 +19,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 import de.hfu.mos.campus.CampusFragment;
+import de.hfu.mos.campus.map.POIFragment;
 import de.hfu.mos.fakultaet.InformatikFragment;
 import de.hfu.mos.home.FelixFragment;
 import de.hfu.mos.home.HomeFragment;
 import de.hfu.mos.home.budget.BudgetRechner;
-import de.hfu.mos.campus.map.POIFragment;
 import de.hfu.mos.home.news.RSSFragment;
 import de.hfu.mos.kontakte.KontaktFragment;
 import de.hfu.mos.studiengang.StudiengangFragment;
@@ -35,6 +38,7 @@ import de.hfu.mos.website.WebsiteFragment;
 
 public class MainActivity extends Activity {
 
+	private final Activity ACTIVITY = this;
     // declare properties
     private String[] mNavigationDrawerItemTitles;
     private DrawerLayout mDrawerLayout;
@@ -74,6 +78,18 @@ public class MainActivity extends Activity {
 		    public void run(){
 		    	backPressed = 0;
 		    	h.postDelayed(this, delay);
+		    	if(!ConnectionDetector.isOnline(ACTIVITY)){
+		    		if(fragment instanceof HomeFragment){
+		    			((Button) findViewById(R.id.buttonFelix)).setBackgroundColor(getResources().getColor(R.color.HFUGrayDark));
+		    			((Button) findViewById(R.id.button_rssreader)).setBackgroundColor(getResources().getColor(R.color.HFUGrayDark));
+		    		}
+		    	}
+		    	else{
+		    		if(fragment instanceof HomeFragment){
+		    			((Button) findViewById(R.id.buttonFelix)).setBackgroundColor(getResources().getColor(R.color.HFULight));
+		    			((Button) findViewById(R.id.button_rssreader)).setBackgroundColor(getResources().getColor(R.color.HFULight));
+		    		}
+		    	}
 		    }
 		}, delay);
         
@@ -116,7 +132,7 @@ public class MainActivity extends Activity {
 
         // Set the adapter for the list view
         mDrawerList.setAdapter(adapter);
-
+        
         // set the item click listener
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
@@ -160,16 +176,25 @@ public class MainActivity extends Activity {
     }
 
 
+    private void noInternetToast(){
+    	Toast.makeText(this, "No Internet available. Please check your connection.", Toast.LENGTH_LONG).show();
+    }
+    
     public void onClick(View v) {
 
         fragment = null;
         
         switch (v.getId()) {
 
-            case R.id.rssreader:
-            	fragment = new RSSFragment();
-            	openFragment(fragment, -2);
-                break;
+            case R.id.button_rssreader:
+            	if(ConnectionDetector.isOnline(ACTIVITY)){
+	            	fragment = new RSSFragment();
+	            	openFragment(fragment, -2);
+            	}
+            	else{
+            		noInternetToast();
+            	}
+            	break;
             case R.id.buttonBudget:
                 fragment = new BudgetRechner();
                 openFragment(fragment, -3);
@@ -179,9 +204,14 @@ public class MainActivity extends Activity {
                 startActivity(hfuMap);
             	break;
             case R.id.buttonFelix:
-                fragment = new FelixFragment(_DownloadManager);
-                openFragment(fragment, -1);
-                break;
+	            if(ConnectionDetector.isOnline(ACTIVITY)){
+	                fragment = new FelixFragment(_DownloadManager);
+	                openFragment(fragment, -1);
+	            }
+	            else{
+	            	noInternetToast();
+	            }
+	            break;
             case R.id.fb_button:
                 Intent facebookIntent = getOpenFacebookIntent(this);
                 startActivity(facebookIntent);
@@ -239,9 +269,13 @@ public class MainActivity extends Activity {
 
             @Override
             public boolean onQueryTextSubmit(String query) {
-                fragment = new WebsiteFragment(query);
-                openFragment(fragment, 8);
-                return false;
+            	if(ConnectionDetector.isOnline(ACTIVITY)){
+	                fragment = new WebsiteFragment(query);
+	                openFragment(fragment, 8);
+            	}
+            	else
+            		noInternetToast();
+            	return true;
             }
 
             @Override
@@ -309,14 +343,26 @@ public class MainActivity extends Activity {
                 fragment = new CampusFragment();
                 break;
             case 6:
-                fragment = new WebmailFragment();
-                break;
+            	if(ConnectionDetector.isOnline(ACTIVITY)){
+	                fragment = new WebmailFragment();
+	                break;
+		        }
+		    	else{
+		    		noInternetToast();
+		    		return;
+		    	}
             case 7:
                 fragment = new VorlesungsplanFragment(_DownloadManager);
                 break;
             case 8:
-                fragment = new WebsiteFragment();
-                break;
+            	if(ConnectionDetector.isOnline(ACTIVITY)){
+            		fragment = new WebsiteFragment();
+            		break;
+            	}
+            	else{
+            		noInternetToast();
+            		return;
+            	}
             default:
                 break;
         }
