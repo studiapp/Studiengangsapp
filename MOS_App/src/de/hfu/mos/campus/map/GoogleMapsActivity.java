@@ -64,7 +64,7 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         .title("C Bau - Eingang"));
 		// Mensa
 		map.addMarker(new MarkerOptions()
-        .position(new LatLng(48.0509514348831, 8.208421915769577))
+        .position(new LatLng(48.05086492327769, 8.20834781974554))
         .title("Mensa"));
 		// Bibliothek
 		map.addMarker(new MarkerOptions()
@@ -72,12 +72,20 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         .title("Bibliothek"));
 		// Uhrenmuseum
 		map.addMarker(new MarkerOptions()
-        .position(new LatLng(48.05067778087021, 8.208067193627357))
-        .title("Bibliothek"));
+        .position(new LatLng(48.051188330649374, 8.207708783447742))
+        .title("Uhrenmuseum"));
 		// Aula
 		map.addMarker(new MarkerOptions()
         .position(new LatLng(48.052057463889504, 8.207694701850414))
         .title("Aula"));
+		// I Bau
+		map.addMarker(new MarkerOptions()
+        .position(new LatLng(48.04993861774366, 8.210676312446594))
+        .title("I Bau"));
+		// I Bau Parkplatz
+		map.addMarker(new MarkerOptions()
+		.position(new LatLng(48.05048293351, 8.2102428004145562))
+        .title("Parkplatz"));
 		
 		
 	}
