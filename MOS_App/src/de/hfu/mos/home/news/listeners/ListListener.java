@@ -11,7 +11,7 @@ import java.util.List;
 
 
 public class ListListener implements OnItemClickListener {
-
+	// Our listener will contain a reference to the list of RSS Items
 	// List item's reference
 	List<RssItem> listItems;
 	// Calling activity reference

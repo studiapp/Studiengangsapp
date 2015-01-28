@@ -9,10 +9,10 @@ import javax.xml.parsers.SAXParserFactory;
 
 
 public class RssReader {
-	
+	// Our class has an attribute which represents RSS Feed URL
 	private String rssUrl;
 
-	/**
+	/** We set this URL with the constructor
 	 * Constructor
 	 * 
 	 * @param rssUrl
@@ -23,7 +23,7 @@ public class RssReader {
 
 	/**
 	 * Get RSS items.
-	 * 
+	 * This method will be called to get the parsing process result
 	 * @return
 	 */
 	public List<RssItem> getItems() throws Exception {

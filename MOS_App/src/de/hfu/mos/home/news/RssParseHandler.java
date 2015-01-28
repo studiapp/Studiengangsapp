@@ -15,7 +15,8 @@ public class RssParseHandler extends DefaultHandler {
 	
 	// Used to reference item while parsing
 	private RssItem currentItem;
-	
+	// We have two indicators which are used to differentiate 
+	// whether a tag title or link is being processed by the parser
 	// Parsing title indicator
 	private boolean parsingTitle;
 	// Parsing link indicator
@@ -25,10 +26,14 @@ public class RssParseHandler extends DefaultHandler {
 		rssItems = new ArrayList<RssItem>();
 	}
 	
+	// We have an access method which returns a list of items that are read from the RSS feed. T
+	// his method will be called when parsing is done.
 	public List<RssItem> getItems() {
 		return rssItems;
 	}
 	
+	// The StartElement method creates an empty RssItem object when an item start tag is being processed. When a title or link tag are being 
+	// processed appropriate indicators are set to true.
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		if ("item".equals(qName)) {
@@ -39,7 +44,9 @@ public class RssParseHandler extends DefaultHandler {
 			parsingLink = true;
 		}
 	}
-	
+	// The EndElement method adds the  current RssItem to the list 
+	// when a closing item tag is processed. It sets appropriate indicators to false - 
+	// when title and link closing tags are processed
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		if ("item".equals(qName)) {
@@ -51,7 +58,8 @@ public class RssParseHandler extends DefaultHandler {
 			parsingLink = false;
 		}
 	}
-	
+	// Characters method fills current RssItem object with data when title and 
+	// link tag content is being processed
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		if (parsingTitle) {
