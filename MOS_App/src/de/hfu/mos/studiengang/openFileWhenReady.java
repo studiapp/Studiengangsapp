@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 /**
  * This class opens the downloaded file with an installed application.
@@ -32,7 +33,11 @@ public class openFileWhenReady extends AsyncTask<Object, Void, Void> {
 		Intent LaunchIntent = new Intent(Intent.ACTION_VIEW);
 		Uri uri = _DownloadManager.getUriForDownloadedFile(id);
 		LaunchIntent.setDataAndType(uri, "application/pdf");
+		try{
 		context.startActivity(LaunchIntent);
+		}catch(Exception e){
+			Toast.makeText(context, "No App to open file", Toast.LENGTH_SHORT).show();
+		}
 
 	};
 
