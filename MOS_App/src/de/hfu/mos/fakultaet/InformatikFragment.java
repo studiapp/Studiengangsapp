@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import de.hfu.mos.ConnectionDetector;
 import de.hfu.mos.R;
+import de.hfu.mos.studiengang.openFileWhenReady;
 
 public class InformatikFragment extends Fragment {
 
@@ -65,7 +66,8 @@ public class InformatikFragment extends Fragment {
 
     private void doOnClick(View v) {
 
-		if(ConnectionDetector.isOnline(getActivity()))	
+		if(ConnectionDetector.isOnline(getActivity())){
+			Toast.makeText(getActivity(), "Download started", Toast.LENGTH_SHORT).show();	
 	        switch (v.getId()) {
 	
 	            case R.id.ButtonAIB:
@@ -91,6 +93,7 @@ public class InformatikFragment extends Fragment {
 	            default:
 	                Toast.makeText(getActivity(), "Irgendwas ging schief", Toast.LENGTH_SHORT).show();
 	        }
+		}
         else Toast.makeText(getActivity(), "No Internet available", Toast.LENGTH_SHORT).show();
     }
 
@@ -102,7 +105,9 @@ public class InformatikFragment extends Fragment {
         request.setNotificationVisibility(Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         request.setDestinationInExternalPublicDir(
                 Environment.DIRECTORY_DOWNLOADS + "/IN_Studiengaenge", linkModul.substring(linkModul.lastIndexOf("/", linkModul.length())));
-        _DownloadManager.enqueue(request);
+
+        //opens file with installed application
+        new openFileWhenReady().execute(request, _DownloadManager, getActivity());
 
     }
 }

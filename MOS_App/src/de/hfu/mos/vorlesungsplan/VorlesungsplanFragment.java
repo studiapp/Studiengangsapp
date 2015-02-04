@@ -68,6 +68,8 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 	private java.util.Calendar today;
 		
 	private final SimpleDateFormat SDF = new SimpleDateFormat("yyyyMMdd'T'hhmmss", Locale.GERMANY);
+	
+	private Toast toast;
 		
 	//we need the Downloadmanager to download ics File from the HFU website.
 	//Downloadmanager has to be initialized in the mainActivity. Otherwise the application will crash
@@ -89,6 +91,8 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 		View rootView = inflater.inflate(R.layout.fragment_vorlesungsplan, container, false);
 
 		today = java.util.Calendar.getInstance();
+		
+		toast = Toast.makeText(getActivity(), "", Toast.LENGTH_SHORT);
 		
 		_CalendarBuilder = new CalendarBuilder();
 	
@@ -309,17 +313,24 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 	private void downloadVorlesungsplan(){
 		
 		Uri path;
-		
+				
 		Request request = new Request(Uri.parse(url));
 		request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 		request.setDestinationInExternalPublicDir(
 				Environment.DIRECTORY_DOWNLOADS +"/MOS_vorlesungsplan" , fileName);
 		long id = _DownloadManager.enqueue(request);
 
-		while ((path = _DownloadManager.getUriForDownloadedFile(id)) == null) {
-
-		}
+		toast.setText("waiting for file");
+		toast.setDuration(Toast.LENGTH_SHORT);
+		toast.show();
 		
+		while ((path = _DownloadManager.getUriForDownloadedFile(id)) == null) {
+			
+		}
+
+		toast.setText("file ready");
+		toast.setDuration(Toast.LENGTH_SHORT);
+		toast.show();
 		file = new File(path.getPath());
 	}
 	
@@ -331,7 +342,10 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 			try {
 				_Layout.removeAllViews();
 				_Layout.addView(this.get());
-				Toast.makeText(getActivity(), "fertig", Toast.LENGTH_SHORT).show();
+
+				toast.setText("fertig");
+				toast.setDuration(Toast.LENGTH_SHORT);
+				toast.show();
 				file = null;
 				_AngezeigterPlan.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
 				_AngezeigterPlan.setText(fileName);
@@ -343,8 +357,18 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 		@Override
 		protected void onPreExecute() {
 			
-			Toast.makeText(getActivity(), "loading...", Toast.LENGTH_SHORT).show();
+			toast.setText("loading...");
+			toast.setDuration(Toast.LENGTH_SHORT);
+			toast.show();
 			
+		}
+		
+		@Override
+		protected void onProgressUpdate(Void... values) {
+
+			toast.setText("working...");
+			toast.setDuration(Toast.LENGTH_LONG);
+			toast.show();
 		}
 		
 		@Override
@@ -376,6 +400,8 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 
 				Calendar calendar = _CalendarBuilder.build(fin);
 
+				publishProgress();
+				
 				Vector<Component> daten = sortData(calendar);
 
 				for(int i = 0; i < daten.size(); i++){
@@ -389,11 +415,14 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 					if(tempDateEnd.get(java.util.Calendar.HOUR_OF_DAY) == 0)
 						tempDateEnd.set(java.util.Calendar.HOUR_OF_DAY, 12);
 
+					publishProgress();
+					
 					//tests if date is already in the past and not ended yet. If so the event is not used and we jump to the next entry
 					if(tempDateEnd.before(today)){
 						continue;
 					}
 					
+
 					for(int j = 0; j<5; j++){
 						
 						//to dynamically add Views to the application, we created a simple textLayout with a LinearLayout and two child views
@@ -623,6 +652,10 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 	
 	//starts the task to search for link in htm code and download that file
 	private void getFileLinkAndShowFile(){
+
+		toast.setText("Bitte warten");
+		toast.setDuration(Toast.LENGTH_SHORT);
+		toast.show();
 		
 		if(_SpinnerSemester.getSelectedItemPosition() == adapterSemster.getPosition("AIB1")){
 			asynkTaskHTML = new DownloadFileAndShow();
