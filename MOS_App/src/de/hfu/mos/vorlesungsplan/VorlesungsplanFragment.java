@@ -168,13 +168,14 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 		return rootView;
 	}
 	
+	//Has to be an AsyncTask b/c network stuff is prohibited on the main thread
 	class DownloadFileAndShow extends AsyncTask<String, Void, Void>{
 
 	@Override
 	protected Void doInBackground(String... url) {
 
 		//gets the html code of the website that contains download link to file
-			try {
+			try {				
 				HttpClient client = new DefaultHttpClient();
 				HttpGet request = new HttpGet(url[0]);
 				HttpResponse response = client.execute(request);
@@ -185,7 +186,8 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 				StringBuilder str = new StringBuilder();
 				String line = null;
 				 while ((line = reader.readLine()) != null) {
-				 str.append(line);
+					 publishProgress();
+					 str.append(line);
 				 }
 				 in.close();
 				 html = str.toString();
@@ -197,23 +199,37 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 	}
 	
 	@Override
-		protected void onPostExecute(Void result) {
+	protected void onPreExecute() {
+		toast.setText("waiting for file");
+		toast.setDuration(Toast.LENGTH_LONG);
+		toast.show();
+	}
+	
+	@Override
+	protected void onProgressUpdate(Void... values) {
+		toast.setText("waiting for file");
+		toast.setDuration(Toast.LENGTH_LONG);
+		toast.show();
+	}
+	
+	@Override
+	protected void onPostExecute(Void result) {
+	
+	//looks for the download link in html code
+		Pattern p = Pattern.compile("/splan/ical[^\"]*");
+		Matcher m = p.matcher(html);
+		if (m.find()){
+			link = m.group();
+			link = link.replaceAll("amp;", "");
+			url = getActivity().getString(R.string.HFUdomain) + link;
+		}
 		
-		//looks for the download link in html code
-			Pattern p = Pattern.compile("/splan/ical[^\"]*");
-			Matcher m = p.matcher(html);
-			if (m.find()){
-				link = m.group();
-				link = link.replaceAll("amp;", "");
-				url = getActivity().getString(R.string.HFUdomain) + link;
-			}
-			
-			if(file != null)
-				file.delete();
-			
-			downloadVorlesungsplan();
-			
-			loadPlan();
+		if(file != null)
+			file.delete();
+		
+		downloadVorlesungsplan();
+		
+		loadPlan();
 	}
 }
 	
@@ -319,10 +335,6 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 		request.setDestinationInExternalPublicDir(
 				Environment.DIRECTORY_DOWNLOADS +"/MOS_vorlesungsplan" , fileName);
 		long id = _DownloadManager.enqueue(request);
-
-		toast.setText("waiting for file");
-		toast.setDuration(Toast.LENGTH_SHORT);
-		toast.show();
 		
 		while ((path = _DownloadManager.getUriForDownloadedFile(id)) == null) {
 			
@@ -414,7 +426,7 @@ public class VorlesungsplanFragment extends Fragment implements OnItemSelectedLi
 					tempDateEnd.setTime(SDF.parse(daten.get(i).getProperty(Property.DTEND).getValue()));
 					if(tempDateEnd.get(java.util.Calendar.HOUR_OF_DAY) == 0)
 						tempDateEnd.set(java.util.Calendar.HOUR_OF_DAY, 12);
-
+					
 					publishProgress();
 					
 					//tests if date is already in the past and not ended yet. If so the event is not used and we jump to the next entry
