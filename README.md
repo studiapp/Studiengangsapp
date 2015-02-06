@@ -1,6 +1,5 @@
-Mobile Systeme Studiengangsapp
-
+## Mobile Systeme Studiengangsapp
 ==============================================
 
-kateMOS
+## kateMOS
 ![alt tag](http://141.28.100.57/kateMOS.jpg)
